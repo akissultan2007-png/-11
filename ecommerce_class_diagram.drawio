@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1400" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- TITLE -->
+    <mxCell id="ttl" value="Тапсырма 1 — UML Класс диаграммасы: Электронды сауда жүйесі (E-Commerce)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=17;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="200" y="10" width="1400" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         ABSTRACT: Пайдаланушы
+    ══════════════════════════════════════════════ -->
+    <mxCell id="user" value="«abstract» Пайдаланушы" style="swimlane;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=3;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="680" y="60" width="260" height="150" as="geometry" />
+    </mxCell>
+    <mxCell id="user_a" value="– id : int&#xa;– аты : String&#xa;– email : String&#xa;– мекенжайы : String&#xa;– телефон : String&#xa;– рөлі : String" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="user">
+      <mxGeometry x="0" y="30" width="260" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="user_sep" value="" style="line;strokeColor=#82b366;fillColor=none;" vertex="1" parent="user">
+      <mxGeometry x="0" y="110" width="260" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="user_m" value="+ тіркелу() : void&#xa;+ кіру() : void&#xa;+ деректіӨзгерт() : void" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="user">
+      <mxGeometry x="0" y="115" width="260" height="35" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         Клиент
+    ══════════════════════════════════════════════ -->
+    <mxCell id="client" value="Клиент" style="swimlane;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="360" y="290" width="260" height="150" as="geometry" />
+    </mxCell>
+    <mxCell id="client_a" value="– тапсырысТарихы : List&#xa;– жинақтаБаллы : int&#xa;– корзина : Корзина&#xa;– деңгейі : String" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="client">
+      <mxGeometry x="0" y="30" width="260" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="client_sep" value="" style="line;strokeColor=#82b366;fillColor=none;" vertex="1" parent="client">
+      <mxGeometry x="0" y="90" width="260" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="client_m" value="+ тапсырысБер() : Тапсырыс&#xa;+ корзинаКөр() : Корзина&#xa;+ баллдарКөр() : int" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="client">
+      <mxGeometry x="0" y="95" width="260" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         Администратор
+    ══════════════════════════════════════════════ -->
+    <mxCell id="admin" value="Администратор" style="swimlane;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="1000" y="290" width="260" height="150" as="geometry" />
+    </mxCell>
+    <mxCell id="admin_a" value="– рұқсаттары : List&#xa;– әрекетЖурналы : List" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="admin">
+      <mxGeometry x="0" y="30" width="260" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="admin_sep" value="" style="line;strokeColor=#82b366;fillColor=none;" vertex="1" parent="admin">
+      <mxGeometry x="0" y="70" width="260" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="admin_m" value="+ тауарҚос() : void&#xa;+ тауарЖою() : void&#xa;+ тапсырысБасқар() : void&#xa;+ журналЖаз() : void" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="admin">
+      <mxGeometry x="0" y="75" width="260" height="75" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         Тауар (Product)
+    ══════════════════════════════════════════════ -->
+    <mxCell id="product" value="Тауар" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="60" y="560" width="270" height="170" as="geometry" />
+    </mxCell>
+    <mxCell id="prod_a" value="– id : int&#xa;– атауы : String&#xa;– сипаттама : String&#xa;– бағасы : double&#xa;– қойmaСаны : int&#xa;– сурет : String&#xa;– жеңілдік : double" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="product">
+      <mxGeometry x="0" y="30" width="270" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="prod_sep" value="" style="line;strokeColor=#6c8ebf;fillColor=none;" vertex="1" parent="product">
+      <mxGeometry x="0" y="130" width="270" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="prod_m" value="+ жасау() : void&#xa;+ жаңарту() : void&#xa;+ жою() : void" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="product">
+      <mxGeometry x="0" y="135" width="270" height="35" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         Категория
+    ══════════════════════════════════════════════ -->
+    <mxCell id="category" value="Категория" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="60" y="290" width="240" height="120" as="geometry" />
+    </mxCell>
+    <mxCell id="cat_a" value="– id : int&#xa;– атауы : String&#xa;– сипаттама : String" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="category">
+      <mxGeometry x="0" y="30" width="240" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="cat_sep" value="" style="line;strokeColor=#6c8ebf;fillColor=none;" vertex="1" parent="category">
+      <mxGeometry x="0" y="80" width="240" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="cat_m" value="+ тауарларКөр() : List" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="category">
+      <mxGeometry x="0" y="85" width="240" height="35" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         Корзина (Cart)
+    ══════════════════════════════════════════════ -->
+    <mxCell id="cart" value="Корзина" style="swimlane;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="380" y="560" width="250" height="150" as="geometry" />
+    </mxCell>
+    <mxCell id="cart_a" value="– id : int&#xa;– тауарларТізімі : List&#xa;– промоКод : PromoКод&#xa;– жалпыСома : double" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="cart">
+      <mxGeometry x="0" y="30" width="250" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="cart_sep" value="" style="line;strokeColor=#d6b656;fillColor=none;" vertex="1" parent="cart">
+      <mxGeometry x="0" y="90" width="250" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="cart_m" value="+ тауарҚос() : void&#xa;+ тауарАл() : void&#xa;+ соманыЕсепте() : double" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="cart">
+      <mxGeometry x="0" y="95" width="250" height="55" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         PromoКод
+    ══════════════════════════════════════════════ -->
+    <mxCell id="promo" value="ПромоКод" style="swimlane;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="380" y="780" width="250" height="130" as="geometry" />
+    </mxCell>
+    <mxCell id="promo_a" value="– код : String&#xa;– жеңілдікПайызы : double&#xa;– жарамдыЛикТорр : Date&#xa;– белсенді : boolean" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="promo">
+      <mxGeometry x="0" y="30" width="250" height="65" as="geometry" />
+    </mxCell>
+    <mxCell id="promo_sep" value="" style="line;strokeColor=#d6b656;fillColor=none;" vertex="1" parent="promo">
+      <mxGeometry x="0" y="95" width="250" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="promo_m" value="+ тексеру() : boolean" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="promo">
+      <mxGeometry x="0" y="100" width="250" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         Тапсырыс (Order)
+    ══════════════════════════════════════════════ -->
+    <mxCell id="order" value="Тапсырыс" style="swimlane;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="700" y="560" width="270" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="order_a" value="– id : int&#xa;– жасалғанКүні : Date&#xa;– статусы : String&#xa;– клиент : Клиент&#xa;– тауарларТізімі : List&#xa;– жалпыСома : double&#xa;– промоКод : ПромоКод" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="order">
+      <mxGeometry x="0" y="30" width="270" height="110" as="geometry" />
+    </mxCell>
+    <mxCell id="order_sep" value="" style="line;strokeColor=#d6b656;fillColor=none;" vertex="1" parent="order">
+      <mxGeometry x="0" y="140" width="270" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="order_m" value="+ рәсімдеу() : void&#xa;+ бас тарту() : void&#xa;+ төлеу() : void" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="order">
+      <mxGeometry x="0" y="145" width="270" height="35" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         Төлем (Payment)
+    ══════════════════════════════════════════════ -->
+    <mxCell id="payment" value="Төлем" style="swimlane;startSize=30;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="700" y="820" width="260" height="160" as="geometry" />
+    </mxCell>
+    <mxCell id="pay_a" value="– id : int&#xa;– түрі : String&#xa;– сомасы : double&#xa;– статусы : String&#xa;– күні : Date&#xa;– транзакцияId : String" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="payment">
+      <mxGeometry x="0" y="30" width="260" height="95" as="geometry" />
+    </mxCell>
+    <mxCell id="pay_sep" value="" style="line;strokeColor=#b85450;fillColor=none;" vertex="1" parent="payment">
+      <mxGeometry x="0" y="125" width="260" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="pay_m" value="+ өңдеу() : void&#xa;+ қайтару() : void" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="payment">
+      <mxGeometry x="0" y="130" width="260" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         Жеткізу (Delivery)
+    ══════════════════════════════════════════════ -->
+    <mxCell id="delivery" value="Жеткізу" style="swimlane;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="1040" y="560" width="260" height="170" as="geometry" />
+    </mxCell>
+    <mxCell id="del_a" value="– id : int&#xa;– мекенжайы : String&#xa;– статусы : String&#xa;– курьер : Курьер&#xa;– жеткізуКүні : Date&#xa;– трекингНөмірі : String" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="delivery">
+      <mxGeometry x="0" y="30" width="260" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="del_sep" value="" style="line;strokeColor=#9673a6;fillColor=none;" vertex="1" parent="delivery">
+      <mxGeometry x="0" y="130" width="260" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="del_m" value="+ жіберу() : void&#xa;+ бақылау() : String&#xa;+ аяқтау() : void" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="delivery">
+      <mxGeometry x="0" y="135" width="260" height="35" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         Курьер
+    ══════════════════════════════════════════════ -->
+    <mxCell id="courier" value="Курьер" style="swimlane;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="1360" y="560" width="240" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="cour_a" value="– id : int&#xa;– аты : String&#xa;– телефон : String&#xa;– белсенді : boolean" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="courier">
+      <mxGeometry x="0" y="30" width="240" height="65" as="geometry" />
+    </mxCell>
+    <mxCell id="cour_sep" value="" style="line;strokeColor=#9673a6;fillColor=none;" vertex="1" parent="courier">
+      <mxGeometry x="0" y="95" width="240" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="cour_m" value="+ тапсырысАл() : void&#xa;+ статусЖаңарт() : void" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="courier">
+      <mxGeometry x="0" y="100" width="240" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         Пікір (Review)
+    ══════════════════════════════════════════════ -->
+    <mxCell id="review" value="Пікір" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="60" y="820" width="250" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="rev_a" value="– id : int&#xa;– мәтін : String&#xa;– рейтинг : int&#xa;– күні : Date&#xa;– клиент : Клиент&#xa;– тауар : Тауар" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="review">
+      <mxGeometry x="0" y="30" width="250" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="rev_sep" value="" style="line;strokeColor=#6c8ebf;fillColor=none;" vertex="1" parent="review">
+      <mxGeometry x="0" y="120" width="250" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="rev_m" value="+ пікірЖаз() : void" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="review">
+      <mxGeometry x="0" y="125" width="250" height="15" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         Лояльдылық (Loyalty)
+    ══════════════════════════════════════════════ -->
+    <mxCell id="loyalty" value="Лояльдылық бағдарламасы" style="swimlane;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="1040" y="820" width="260" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="loy_a" value="– клиент : Клиент&#xa;– баллдары : int&#xa;– деңгейі : String&#xa;– жеңілдікПайызы : double" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="loyalty">
+      <mxGeometry x="0" y="30" width="260" height="65" as="geometry" />
+    </mxCell>
+    <mxCell id="loy_sep" value="" style="line;strokeColor=#82b366;fillColor=none;" vertex="1" parent="loyalty">
+      <mxGeometry x="0" y="95" width="260" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="loy_m" value="+ баллЕсепте() : int&#xa;+ деңгейЖаңарт() : void" style="text;strokeColor=none;fillColor=none;align=left;spacingLeft=8;fontSize=11;verticalAlign=top;" vertex="1" parent="loyalty">
+      <mxGeometry x="0" y="100" width="260" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- ══════════════════════════════════════════════
+         RELATIONSHIPS
+    ══════════════════════════════════════════════ -->
+
+    <!-- Пайдаланушы → Клиент (inheritance) -->
+    <mxCell id="r_uc" value="«наследование»" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=0;endSize=14;strokeColor=#82b366;fontColor=#82b366;fontSize=10;dashed=1;" edge="1" source="user" target="client" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Пайдаланушы → Администратор (inheritance) -->
+    <mxCell id="r_ua" value="«наследование»" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=0;endSize=14;strokeColor=#82b366;fontColor=#82b366;fontSize=10;dashed=1;" edge="1" source="user" target="admin" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Категория → Тауар (composition 1..*) -->
+    <mxCell id="r_cat_prod" value="«композиция» 1..*" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=ERmandOne;startFill=1;strokeColor=#6c8ebf;fontColor=#6c8ebf;fontSize=10;" edge="1" source="category" target="product" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Клиент → Корзина (composition 1) -->
+    <mxCell id="r_cl_cart" value="«ие болу» 1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=ERmandOne;startFill=1;strokeColor=#d6b656;fontColor=#d6b656;fontSize=10;" edge="1" source="client" target="cart" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Корзина → ПромоКод -->
+    <mxCell id="r_cart_promo" value="0..1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#d6b656;fontColor=#d6b656;fontSize=10;dashed=1;" edge="1" source="cart" target="promo" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Корзина → Тауар (*:*) -->
+    <mxCell id="r_cart_prod" value="«қосу» *" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#6c8ebf;fontColor=#6c8ebf;fontSize=10;dashed=1;" edge="1" source="cart" target="product" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Клиент → Тапсырыс (1..*) -->
+    <mxCell id="r_cl_ord" value="«жасайды» 1..*" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#d6b656;fontColor=#d6b656;fontSize=10;" edge="1" source="client" target="order" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Тапсырыс → Тауар (*:*) -->
+    <mxCell id="r_ord_prod" value="«қамтиды» *" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#d6b656;fontColor=#6c8ebf;fontSize=10;dashed=1;" edge="1" source="order" target="product" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Тапсырыс → Төлем (1) -->
+    <mxCell id="r_ord_pay" value="«composition» 1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=ERmandOne;startFill=1;strokeColor=#b85450;fontColor=#b85450;fontSize=10;" edge="1" source="order" target="payment" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Тапсырыс → Жеткізу (1) -->
+    <mxCell id="r_ord_del" value="«composition» 1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=ERmandOne;startFill=1;strokeColor=#9673a6;fontColor=#9673a6;fontSize=10;" edge="1" source="order" target="delivery" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Жеткізу → Курьер -->
+    <mxCell id="r_del_cour" value="«ассоциация» 1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#9673a6;fontColor=#9673a6;fontSize=10;" edge="1" source="delivery" target="courier" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Клиент → Пікір -->
+    <mxCell id="r_cl_rev" value="«жазады» *" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#6c8ebf;fontColor=#6c8ebf;fontSize=10;dashed=1;" edge="1" source="client" target="review" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Тауар → Пікір -->
+    <mxCell id="r_prod_rev" value="«бар» *" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#6c8ebf;fontColor=#6c8ebf;fontSize=10;dashed=1;" edge="1" source="product" target="review" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Клиент → Лояльдылық -->
+    <mxCell id="r_cl_loy" value="«бонустар» 1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#82b366;fontColor=#82b366;fontSize=10;dashed=1;" edge="1" source="client" target="loyalty" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- COMMENT: Abstract class note -->
+    <mxCell id="note1" value="«abstract» Пайдаланушы — абстрактты класс.&#xa;Клиент және Администратор осы класстан&#xa;мұрагерлейді. Кодта тікелей нысан&#xa;жасалмайды, тек ішкі кластар арқылы." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffffcc;strokeColor=#aaaa00;fontSize=10;align=left;" vertex="1" parent="1">
+      <mxGeometry x="980" y="60" width="300" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="note_line" value="" style="edgeStyle=none;endArrow=open;endFill=0;strokeColor=#aaaa00;dashed=1;" edge="1" source="note1" target="user" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>
